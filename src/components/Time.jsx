@@ -12,9 +12,9 @@ export const Time = ({crypto_props, loading}) => {
     console.log(data);
     return (
         <div>
-            <ul className="">
-                <h3>Day</h3>
-                {data.map(data => <li key={data.time} className='list-group-item'>
+            <ul>
+                <h4 className="Main-color mb-3">Day</h4>
+                {data.map(data => <li key={data.time} className='list-group-item Table-color'>
                         {/* moment.js to parse unix timestamp to desired format */}
                         {moment.unix(data.time).format("DD/MM/YYYY")}
                     </li>
