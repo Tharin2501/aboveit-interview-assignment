@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Crypto = ({crypto_props}) => {
+export const Time = ({crypto_props}) => {
 
     const data = crypto_props;
     console.log(data);
@@ -8,9 +8,9 @@ export const Crypto = ({crypto_props}) => {
     return (
         <div>
             <ul className="">
-                <h3>High</h3>
+                <h3>Time</h3>
                 {data.map(data => <li key={data.time} className='list-group-item'>
-                        {data.high}
+                        {data.close}
                     </li>
                 )}
             </ul>
