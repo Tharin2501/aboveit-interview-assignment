@@ -1,16 +1,18 @@
 import React from "react";
-
+import moment from "moment";
 export const Time = ({crypto_props}) => {
 
     const data = crypto_props;
-    console.log(data);
 
+    console.log(data);
     return (
         <div>
             <ul className="">
-                <h3>Time</h3>
+                <h3>Day</h3>
                 {data.map(data => <li key={data.time} className='list-group-item'>
-                        {data.close}
+                    {/*{data.time} */}
+                    /* moment.js to parse unix timestamp to desired format*/
+                    {moment.unix(data.time).format("DD/MM/YYYY")}
                     </li>
                 )}
             </ul>
