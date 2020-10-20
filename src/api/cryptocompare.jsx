@@ -12,8 +12,10 @@ export const Cryptocompare = () => {
     useEffect(() => {
         axios.get("https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=8ae55d463e1bf8d38b4a502ca47512f9b1dec21533ad9af7acb993e8ba952bc2")
             .then(res => {
+                setLoading(true);
                 const response = res.data.Data.Data;
                 setData(response)
+                setLoading(false);
             });
     }, []);
 
@@ -30,12 +32,12 @@ export const Cryptocompare = () => {
     return (
         <div className="container">
             <div className="row p-3">
-            <Crypto crypto_props={indexOfCurrentPage}/>
-            <Time crypto_props={indexOfCurrentPage}/>
+            <Crypto crypto_props={indexOfCurrentPage}  loading={loading}/>
+            <Time crypto_props={indexOfCurrentPage} loading={loading}/>
             </div>
             <Pagination
-                postsPerPage={dataPerPage}
-                totalPosts={data.length}
+                dataPerPage={dataPerPage}
+                totalData={data.length}
                 paginate={paginate}
             />
         </div>

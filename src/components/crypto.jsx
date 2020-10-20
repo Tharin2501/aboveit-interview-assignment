@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Crypto = ({crypto_props}) => {
+export const Crypto = ({crypto_props, loading}) => {
+
+    if (loading) {
+        return <h2>Loading...</h2>;
+    }
 
     const data = crypto_props;
     console.log(data);
