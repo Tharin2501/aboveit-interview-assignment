@@ -34,19 +34,25 @@ export const CryptoCompare = () => {
     return (
         <div>
             <div className="row">
-                <h1 className='Main-header mr-5'>100 days of Bitcoin</h1>
+                <h1 className='Main-header ml-4'>Bitcoin</h1>
+                <div className="w-100"></div>
+                <div className="ml-4"> <h4 className= "Second-header">100 days</h4></div>
+
                 <Pagination
                     dataPerPage={dataPerPage}
                     totalData={data.length}
                     paginate={paginate}
                 />
+
+
             </div>
+
 
             <div className="Main-table container">
                 <table className="row">
                     {/* columns*/}
                     <thead>
-                    <tr className="column-Container">
+                    <tr>
                         <td className="Table-header">time</td>
                     </tr>
                     <tr className="column-Container">

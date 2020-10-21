@@ -3,30 +3,11 @@ body, html {
     width: 100%;
 }
 
-.Table-color {
-  color: white;
-}
-
-.Image-logo {
-    height: 45%;
-    width: 45%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.High-header {
-    color: #45e946;
-}
-
-.Low-header {
-    color: red;
-}
-
 .Main-bg {
     background-image: url(../src/images/city2.png);
     /* Full height */
     height: 100%;
-    width: 150%;
+    width: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -35,11 +16,15 @@ body, html {
 }
 
 .Main-header {
-    color: sandybrown;
-    font-size: 3.5em;
+    color: white;
+    font-size: 6em;
 }
 
-
+.Second-header {
+    color: sandybrown;
+    font-size: 3em;
+    line-height:  0.5em;
+}
 
 @font-face {
     font-family: Montserrat-Regular;
@@ -54,41 +39,39 @@ body, html {
 
 table {
     width: 100%;
+}
 
+.Table-header {
+    padding: 25px;
+    font-weight: unset;
+    color: white;
+    font-family: Montserrat-Medium;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0.32);
+}
+
+.Table-Content {
+    color: white;
+    font-size: 1em;
 }
 
 .list-group-item {
     background-color: transparent;
 }
 
-.column-Container  {
-    padding: 45px;
-    font-weight: unset;
-}
 
-.Table-header {
-    padding: 40px;
-    font-weight: unset;
-    color: white;
-    font-family: Montserrat-Medium;
-    font-size: 1em;
-
-    text-transform: uppercase;
-    background-color: rgba(255,255,255,0.32);
-}
-
-
-.XY:hover {
-    background-color: rgba(255,255,255,0.2);
-}
-.Main-table .column-Container td:hover {
+.Main-table td:hover {
     background-color: rgba(255,255,255,0.2);
 }
 
-
+.Singel-hover:hover {
+    background-color: rgba(255,255,255,0.2);
+}
 
 .Main-table {
-    border-radius: 20px;
+    width: 100%;
+    border-radius: 16px;
     overflow: hidden;
     background: #7918f2;
     background: -webkit-linear-gradient(-68deg, #ac32e4 , #4801ff);
@@ -97,9 +80,4 @@ table {
     background: linear-gradient(-68deg, #ac32e4 , #4801ff);
     font-family: Montserrat-Medium;
     background-color: rgba(255,255,255,0.32);
-}
-
-.Main-table table {
-    background-color: transparent;
-    font-size: 15px;
 }
