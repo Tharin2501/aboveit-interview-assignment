@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios";
-import logo from "../images/logo.png"
 import {High, Low} from "../components/HighAndLow";
 import Pagination from "../pagination/Pagination";
 import {Time} from "../components/Time";
 import {Close, Open} from "../components/OpenAndClose";
+import {VolumeFrom, VolumeTo} from "../components/Volume";
 
 export const CryptoCompare = () => {
 
@@ -32,24 +32,84 @@ export const CryptoCompare = () => {
     // bla gjennom alle dagene
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
-        <div className="container-fluid">
+        <div>
             <div className="row">
-                    <img src={logo} className="Image-logo float-left mt-2 mr-2" alt="image not found"/>
-                <h1 className='Main-header mt-2 mr-5'>100 days of Bitcoin</h1>
-            <Pagination className=""
-                dataPerPage={dataPerPage}
-                totalData={data.length}
-                paginate={paginate}
-            />
+                <h1 className='Main-header mr-5'>100 days of Bitcoin</h1>
+                <Pagination
+                    dataPerPage={dataPerPage}
+                    totalData={data.length}
+                    paginate={paginate}
+                />
             </div>
-            <div className="row p-4">
-                <Time crypto_props={indexOfCurrentPage} loading={loading}/>
-                <High crypto_props={indexOfCurrentPage} loading={loading}/>
-                <Low crypto_props={indexOfCurrentPage} loading={loading}/>
-                <Open crypto_props={indexOfCurrentPage} loading={loading}/>
-                <Close crypto_props={indexOfCurrentPage} loading={loading}/>
+
+            <div className="Main-table container">
+                <table className="row">
+                    {/* columns*/}
+                    <thead>
+                    <tr className="column-Container">
+                        <td className="Table-header">time</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <Time crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+
+
+                    <thead>
+                    <tr className="column-Container ">
+                        <td className="Table-header">high</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <High crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+
+                    <thead>
+                    <tr className="column-Container">
+                        <td className="Table-header">low</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <Low crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+
+                    <thead>
+                    <tr className="column-Container ">
+                        <td className="Table-header">open</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <Open crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+
+                    <thead>
+                    <tr className="column-Container ">
+                        <td className="Table-header">close</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <Close crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+
+                    </thead>
+                    <thead>
+                    <tr className="column-Container ">
+                        <td className="Table-header">Volum from</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <VolumeFrom crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+
+                    <thead>
+                    <tr className="column-Container">
+                        <td className="Table-header">volum to</td>
+                    </tr>
+                    <tr className="column-Container">
+                        <VolumeTo crypto_props={indexOfCurrentPage} loading={loading}/>
+                    </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     )
 };
-

@@ -1,26 +1,27 @@
 import React from "react";
 
-export const Open = ({crypto_props}) => {
+export const VolumeFrom = ({crypto_props}) => {
 
     return (
-
         <td>
             {crypto_props.map(data => <li key={data.time} className='list-group-item Table-color mx-4 XY'>
-                    {data.open}
+                    {data.volumefrom}
                 </li>
             )}
         </td>
     )
 };
 
-export const Close = ({crypto_props}) => {
+
+export const VolumeTo = ({crypto_props}) => {
 
     return (
         <td>
             {crypto_props.map(data => <li key={data.time} className='list-group-item Table-color mx-4 XY'>
-                    {data.close}
+                    {data.volumeto}
                 </li>
             )}
         </td>
     )
 };
+

@@ -1,52 +1,28 @@
 import React from "react";
 
-export const High = ({crypto_props, loading}) => {
-
-    if (loading) {
-        return <h2>Loading...</h2>;
-    }
-
-    const data = crypto_props;
-    console.log(data);
+export const High = ({crypto_props}) => {
 
     return (
-        <div>
-            <ul>
-                <h4 className="High-header mb-3">High</h4>
-                {data.map(data => <li key={data.time} className='list-group-item Table-color'>
-                        {data.high}
-                    </li>
-                )}
-            </ul>
-        </div>
+        <td>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-color mx-4 XY'>
+                    {data.high}
+                </li>
+            )}
+        </td>
     )
 };
 
 
-export const Low = ({crypto_props, loading}) => {
-
-    if (loading) {
-        return <h2>Loading...</h2>;
-    }
-
-    const data = crypto_props;
-    console.log(data);
+export const Low = ({crypto_props}) => {
 
     return (
-        <div>
-            <ul>
-                <h4 className="Low-header mb-3">Low</h4>
-                {data.map(data => <li key={data.time} className='list-group-item Table-color'>
-                        {data.low}
-                    </li>
-                )}
-            </ul>
-        </div>
+
+        <td>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-color mx-4 XY'>
+                    {data.low}
+                </li>
+            )}
+        </td>
+
     )
 };
-
-/*
-TODO: Lag en nettside som presenterer informasjonen i en stylet tabell med minst 4 kolonner med informasjon om bitcoin.
- Tabellen skal kun vise 20 dager om gangen,
- men det skal være mulig å bla gjennom alle dagene API-kallet returnerer ved hjelp av paginering.
- */

@@ -1,11 +1,18 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
 
 .Table-color {
-  color: #6457A6;
+  color: white;
 }
 
 .Image-logo {
-    height: 5%;
-    width: 5%;
+    height: 45%;
+    width: 45%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .High-header {
     color: #45e946;
@@ -14,15 +21,85 @@
 .Low-header {
     color: red;
 }
+
 .Main-bg {
-    background-color: #6457A6;
+    background-image: url(../src/images/city2.png);
+    /* Full height */
+    height: 100%;
+    width: 150%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Main-header {
     color: sandybrown;
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
-.Main-color {
-    color: #9DACFF;
+
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../src/fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url('../src/fonts/montserrat/Montserrat-Medium.ttf');
+}
+<!-- TABLE -->
+
+table {
+    width: 100%;
+
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.column-Container  {
+    padding: 45px;
+    font-weight: unset;
+}
+
+.Table-header {
+    padding: 40px;
+    font-weight: unset;
+    color: white;
+    font-family: Montserrat-Medium;
+    font-size: 1em;
+
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0.32);
+}
+
+
+.XY:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+.Main-table .column-Container td:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+
+.Main-table {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #7918f2;
+    background: -webkit-linear-gradient(-68deg, #ac32e4 , #4801ff);
+    background: -o-linear-gradient(-68deg, #ac32e4 , #4801ff);
+    background: -moz-linear-gradient(-68deg, #ac32e4 , #4801ff);
+    background: linear-gradient(-68deg, #ac32e4 , #4801ff);
+    font-family: Montserrat-Medium;
+    background-color: rgba(255,255,255,0.32);
+}
+
+.Main-table table {
+    background-color: transparent;
+    font-size: 15px;
 }
