@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pagination = ({ dataPerPage, totalData, paginate}) => {
+const Pagination = ({dataPerPage, totalData, paginate}) => {
 
     const pageNumbers = [];
 
@@ -14,14 +14,14 @@ const Pagination = ({ dataPerPage, totalData, paginate}) => {
                 {pageNumbers.map(number => (
                     <li key={number}>
                         <div onClick={() => paginate(number)}>
-                            <div className="pagination-Btn button-1">{number}</div>
+                            <a href="#" className="pagination-Btn button-1">{number}</a>
                         </div>
                     </li>
 
                 ))}
                 <li>
                     <div onClick={() => paginate(pageNumbers.length)}>
-                        <div className="pagination-Btn button-1">-></div>
+                        <a href="#" className="pagination-Btn button-1">-></a>
                     </div>
                 </li>
             </ul>

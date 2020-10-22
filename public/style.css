@@ -76,6 +76,7 @@ table {
 
 .Main-table {
     width: 100%;
+    margin-right: 50px;
     border-radius: 16px;
     overflow: hidden;
     background: #7918f2;
@@ -112,11 +113,15 @@ table {
     margin: 5px;
     cursor: pointer;
     transition: .3s ease-in-out;
+
 }
 
 .pagination-Btn:hover {
     transform: scale(1.2) translateY(-5px);
+    color: white;
+    text-decoration: none;
 }
+
 
 .pagination-Btn::before {
     content: '';
@@ -127,6 +132,10 @@ table {
     transform: scale(0);
     z-index: -1;
     transition: .3s ease-in-out;
+}
+
+.pagination-Btn:focus {
+    color: #b0e8eb;
 }
 
 @keyframes setOpacity {
@@ -142,3 +151,5 @@ table {
     opacity: 1;
     animation: setOpacity 2s;
 }
+
+
