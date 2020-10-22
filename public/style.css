@@ -128,3 +128,17 @@ table {
     z-index: -1;
     transition: .3s ease-in-out;
 }
+
+@keyframes setOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-inn-transition {
+    opacity: 1;
+    animation: setOpacity 2s;
+}
