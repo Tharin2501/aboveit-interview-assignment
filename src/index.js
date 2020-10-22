@@ -5,7 +5,8 @@ import city2 from "./images/city2.png";
 
 function App() {
     return (
-        <div className="container-fluid" style={{background: `url(${city2})`,minWidth: "100wv",backgroundSize: "cover"}}>
+        <div className="container-fluid"
+             style={{background: `url(${city2})`, minWidth: "100wv", minHeight: "100vh", backgroundSize: "cover"}}>
             <CryptoCompare/>
         </div>
 

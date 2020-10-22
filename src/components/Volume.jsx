@@ -4,7 +4,7 @@ export const VolumeFrom = ({crypto_props}) => {
 
     return (
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ " + data.volumefrom}
                 </li>
             )}
@@ -17,7 +17,7 @@ export const VolumeTo = ({crypto_props}) => {
 
     return (
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ " + data.volumeto + " B"}
                 </li>
             )}

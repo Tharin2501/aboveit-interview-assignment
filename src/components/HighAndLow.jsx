@@ -4,7 +4,7 @@ export const High = ({crypto_props}) => {
 
     return (
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ "+ data.high }
                 </li>
             )}
@@ -18,7 +18,7 @@ export const Low = ({crypto_props}) => {
     return (
 
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ "+ data.low }
                 </li>
             )}

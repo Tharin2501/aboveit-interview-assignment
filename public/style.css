@@ -14,36 +14,25 @@ body, html {
     src: local('Montserrat-Medium"'), url(../src/fonts/montserrat/Montserrat-Medium.ttf) format('ttf');
 }
 
-.Main-bg {
-    background-image: url(../src/images/city2.png);
-    /* Full height */
-    height: 100%;
-    width: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .Main-header {
     color: white;
-    font-size: 6em;
-
+    font-size: 5em;
+    letter-spacing: 1px
 }
 
 .Second-header {
-    color: sandybrown;
+    color: #b0e8eb;
     font-size: 3em;
-    line-height: 0.5em;
-
+    line-height: 1em;
+    letter-spacing: 3px;
 }
 
-
-<!--
-TABLE
-
--->
+.logo {
+    width: 4%;
+    height: 4%;
+}
+/* TABLE */
 
 table {
     width: 100%;
@@ -52,7 +41,6 @@ table {
 .Table-header {
     padding-top: 24px;
     padding-bottom: 20px;
-
     font-weight: unset;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.32);
@@ -60,8 +48,8 @@ table {
     color: #fff;
     line-height: 1.5;
     text-align: center
-
 }
+
 
 .Table-Content {
     font-size: 16px;
@@ -96,4 +84,47 @@ table {
     background: -moz-linear-gradient(-68deg, #ac32e4, #4801ff);
     background: linear-gradient(-68deg, #ac32e4, #4801ff);
     background-color: rgba(255, 255, 255, 0.32);
+}
+
+/* PAGINATION */
+
+.pagination-Container {
+    width: 400px;
+    height: 400px;
+
+}
+
+.pagination-Btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    background: #7918f2;
+    background: -webkit-linear-gradient(360deg, #ac32e4, #4801ff);
+    background: -o-linear-gradient(360deg, #ac32e4, #4801ff);
+    background: -moz-linear-gradient(360deg, #ac32e4, #4801ff);
+    background: linear-gradient(360deg, #ac32e4, #4801ff);
+    background-color: rgba(255, 255, 255, 0.32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.pagination-Btn:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+.pagination-Btn::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    z-index: -1;
+    transition: .3s ease-in-out;
 }

@@ -5,7 +5,7 @@ export const Open = ({crypto_props}) => {
     return (
 
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ "+ data.open}
                 </li>
             )}
@@ -17,7 +17,7 @@ export const Close = ({crypto_props}) => {
 
     return (
         <td>
-            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-2 Singel-hover'>
+            {crypto_props.map(data => <li key={data.time} className='list-group-item Table-Content mx-1 Singel-hover'>
                     {"$ "+data.close}
                 </li>
             )}

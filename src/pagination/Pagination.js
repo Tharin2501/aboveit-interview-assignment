@@ -9,20 +9,20 @@ const Pagination = ({ dataPerPage, totalData, paginate}) => {
     }
 
     return (
-        <nav className="mt-4 ml-2">
+        <nav className="mt-1">
             <ul className='pagination'>
                 {pageNumbers.map(number => (
-                    <li key={number} className='page-item'>
-                        <a onClick={() => paginate(number)} href='/#'  className='page-link'>
-                            {number}
-                        </a>
+                    <li key={number}>
+                        <div onClick={() => paginate(number)}>
+                            <div className="pagination-Btn button-1">{number}</div>
+                        </div>
                     </li>
 
                 ))}
-                <li className='page-item'>
-                    <a onClick={() => paginate(pageNumbers.length)} href='/#' className='page-link'>
-                        ->
-                    </a>
+                <li>
+                    <div onClick={() => paginate(pageNumbers.length)}>
+                        <div className="pagination-Btn button-1">-></div>
+                    </div>
                 </li>
             </ul>
         </nav>

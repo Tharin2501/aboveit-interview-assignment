@@ -5,6 +5,7 @@ import Pagination from "../pagination/Pagination";
 import {Time} from "../components/Time";
 import {Close, Open} from "../components/OpenAndClose";
 import {VolumeFrom, VolumeTo} from "../components/Volume";
+import logo from '../images/logo.png';
 
 export const CryptoCompare = () => {
 
@@ -33,33 +34,32 @@ export const CryptoCompare = () => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
         <div>
-            <div className="row">
-                <h1 className='Main-header'>Bitcoin</h1>
-                <div className="w-100"></div>
-                <div className="ml-1"> <h4 className="Second-header">100 days</h4></div>
-
-                <Pagination
-                    dataPerPage={dataPerPage}
-                    totalData={data.length}
-                    paginate={paginate}
-                />
-
-
+            <div className="row ">
+                <h1 className='Main-header col-sm'>Cryptocompare</h1>
+                <div className="w-100"/>
+                <div className="col-sm-7">
+                    <h4 className="Second-header ml-2">Last 100 days of  <img src={logo} className="logo mb-2 " alt="Image not found" /> data</h4>
+                </div>
+                <div className="col-sm-5">
+                    <Pagination
+                        dataPerPage={dataPerPage}
+                        totalData={data.length}
+                        paginate={paginate}
+                    />
+                </div>
             </div>
 
-
-            <div className="Main-table container">
+            <div className="Main-table container mt-4">
                 <table className="row">
                     {/* columns*/}
                     <thead>
                     <tr>
-                        <td className="Table-header">Tuesday</td>
+                        <td className="Table-header">Date</td>
                     </tr>
                     <tr>
                         <Time crypto_props={indexOfCurrentPage} loading={loading}/>
                     </tr>
                     </thead>
-
 
                     <thead>
                     <tr>
