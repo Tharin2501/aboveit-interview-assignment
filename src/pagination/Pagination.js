@@ -21,7 +21,7 @@ const Pagination = ({dataPerPage, totalData, paginate}) => {
                 ))}
                 <li>
                     <div onClick={() => paginate(pageNumbers.length)}>
-                        <a href="#" className="pagination-Btn button-1">-></a>
+                        <a href="#" className="pagination-Btn button-1">=></a>
                     </div>
                 </li>
             </ul>

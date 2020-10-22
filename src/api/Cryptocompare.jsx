@@ -30,92 +30,99 @@ export const CryptoCompare = () => {
     const indexOfFirstPost = indexOfLastPost - dataPerPage;
     const indexOfCurrentPage = data.slice(indexOfFirstPost, indexOfLastPost);
 
-    // bla gjennom alle dagene
     const paginate = pageNumber => setCurrentPage(pageNumber);
+
     return (
-        <div>
-            <div className="row ">
-                <h1 className='Main-header col-sm'>Cryptocompare</h1>
-                <div className="w-100"/>
-                <div className="col-sm-7">
-                    <h4 className="Second-header ml-2">Last 100 days of  <img src={logo} className="logo mb-2 " alt="Image not found" /> data</h4>
+        <div className="">
+            <div className="row">
+                <div className="col-sm-8">
+                    <div className="Main-table container ">
+
+                        <table className="row">
+                            <thead>
+                            <tr>
+                                <td className="Table-header">Date</td>
+                            </tr>
+                            <tr>
+                                <Time crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                            <thead>
+                            <tr>
+                                <td className="Table-header">high</td>
+                            </tr>
+                            <tr>
+                                <High crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                            <thead>
+                            <tr className="column-Container">
+                                <td className="Table-header">low</td>
+                            </tr>
+                            <tr className="column-Container">
+                                <Low crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                            <thead>
+                            <tr className="column-Container ">
+                                <td className="Table-header">open</td>
+                            </tr>
+                            <tr className="column-Container">
+                                <Open crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                            <thead>
+                            <tr>
+                                <td className="Table-header">close</td>
+                            </tr>
+                            <tr>
+                                <Close crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+
+                            </thead>
+                            <thead>
+                            <tr>
+                                <td className="Table-header">Volum from</td>
+                            </tr>
+                            <tr>
+                                <VolumeFrom crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                            <thead>
+                            <tr>
+                                <td className="Table-header">volum to</td>
+                            </tr>
+                            <tr>
+                                <VolumeTo crypto_props={indexOfCurrentPage} loading={loading}/>
+                            </tr>
+                            </thead>
+
+                        </table>
+                    </div>
                 </div>
-                <div className="col-sm-5">
-                    <Pagination
-                        dataPerPage={dataPerPage}
-                        totalData={data.length}
-                        paginate={paginate}
-                    />
+                <div className="col-sm-4">
+                    <h1 className='Main-header'>Cryptocompare</h1>
+                    <div>
+                        <h4 className="Second-header ">Last 100 days of <img src={logo} className="logo"
+                                                                             alt=""/> data</h4>
+                    </div>
+                    <div className="pagination-Container">
+                        <Pagination
+                            dataPerPage={dataPerPage}
+                            totalData={data.length}
+                            paginate={paginate}
+                        />
+                    </div>
                 </div>
+
             </div>
 
-            <div className="Main-table container mt-4">
-                <table className="row">
-                    {/* columns*/}
-                    <thead>
-                    <tr>
-                        <td className="Table-header">Date</td>
-                    </tr>
-                    <tr>
-                        <Time crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
 
-                    <thead>
-                    <tr>
-                        <td className="Table-header">high</td>
-                    </tr>
-                    <tr>
-                        <High crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
-
-                    <thead>
-                    <tr className="column-Container">
-                        <td className="Table-header">low</td>
-                    </tr>
-                    <tr className="column-Container">
-                        <Low crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
-
-                    <thead>
-                    <tr className="column-Container ">
-                        <td className="Table-header">open</td>
-                    </tr>
-                    <tr className="column-Container">
-                        <Open crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
-
-                    <thead>
-                    <tr className="column-Container ">
-                        <td className="Table-header">close</td>
-                    </tr>
-                    <tr className="column-Container">
-                        <Close crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-
-                    </thead>
-                    <thead>
-                    <tr className="column-Container ">
-                        <td className="Table-header">Volum from</td>
-                    </tr>
-                    <tr className="column-Container">
-                        <VolumeFrom crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
-
-                    <thead>
-                    <tr className="column-Container">
-                        <td className="Table-header">volum to</td>
-                    </tr>
-                    <tr className="column-Container">
-                        <VolumeTo crypto_props={indexOfCurrentPage} loading={loading}/>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
         </div>
     )
 };
