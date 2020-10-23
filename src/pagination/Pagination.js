@@ -14,14 +14,14 @@ const Pagination = ({dataPerPage, totalData, paginate}) => {
                 {pageNumbers.map(number => (
                     <li key={number}>
                         <div onClick={() => paginate(number)}>
-                            <a href="#" className="pagination-Btn button-1">{number}</a>
+                            <a href="#" className="pagination-btn button-1">{number}</a>
                         </div>
                     </li>
 
                 ))}
                 <li>
                     <div onClick={() => paginate(pageNumbers.length)}>
-                        <a href="#" className="pagination-Btn button-1">=></a>
+                        <a href="#" className="pagination-btn button-1">=></a>
                     </div>
                 </li>
             </ul>

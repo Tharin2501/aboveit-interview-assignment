@@ -97,7 +97,7 @@ body, html {
     margin-top: 15%;
 }
 
-.pagination-Btn {
+.pagination-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -118,14 +118,14 @@ body, html {
 
 }
 
-.pagination-Btn:hover {
+.pagination-btn:hover {
     transform: scale(1.2) translateY(-5px);
     color: white;
     text-decoration: none;
 }
 
 
-.pagination-Btn::before {
+.pagination-btn::before {
     content: '';
     width: 40px;
     height: 40px;
@@ -136,7 +136,7 @@ body, html {
     transition: .3s ease-in-out;
 }
 
-.pagination-Btn:focus {
+.pagination-btn:focus {
     color: #b0e8eb;
 }
 
